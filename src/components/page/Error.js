@@ -7,7 +7,7 @@ const Error = () => {
    setTimeout(() => {
     navigate('/')
    }, 2000);
-  }, [])
+  }, [navigate])
   return (
     <div className='notfound'>
       <h3>page not found</h3>
