@@ -97,7 +97,7 @@ const currentPosts = Data.slice(firstPostIndex, lastPostIndex);
           >{number}</button>
       
      )
-     return 
+     return null
   })
   
 
