@@ -8,7 +8,7 @@ const Userlist = ({userdata}) => {
       {userdata.map((user,index)=>{
         return (
           <UserCard 
-             key={user.id}
+             key={index}
             image={user.image}
             name={user.name}
             phone={user.phone}
