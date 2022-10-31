@@ -1,0 +1,106 @@
+.ul{
+    display:flex;
+    margin-top: 1.4rem;
+    padding: left 1rem;
+    justify-content:space-evenly;
+    align-items:center;
+    background-color:#81C6E8;;
+
+}
+
+.ul li {
+    list-style:none;
+    height:8vh;
+    justify-content:space-evenly;
+    align-items:center;
+    display:flex;
+    text-transform:uppercase;
+}
+
+
+.home,.service {
+    background-color: #81C6E8;
+    color: #fff;
+    height: 90vh;
+    font-size: 2rem;
+  }
+  .home,.service{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+  }
+  .link{
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s;
+    text-decoration:none;
+    text-transform: uppercase;
+    padding: 0.8rem 1.2rem;
+  }
+
+  .link:hover {
+    opacity: 0.7;
+  }
+   
+
+  .error-btn {
+   background-color: blue;
+   border-radius: 5px;
+   padding: .5rem;
+  }
+
+  .nested-link{
+    background-color: blue;
+    border-radius: 5px;
+    color: #fff;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin-top: .6rem;
+    text-decoration: none;
+  }
+
+  .error-container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    align-content:center;
+    justify-content:center;
+  }
+  
+  .error-container button{
+    background-color: blue;
+    border-radius: 5px;
+    padding: .5rem;
+  }
+
+  .error-container p{
+    color: red;
+    font-size: 14px;
+  }
+
+  .notfound h3{
+    color: red;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    align-content:center;
+    justify-content:center;
+    font-size: 14px;
+  }
+    
+  .service-list li{
+  list-style: none;
+  }
+
+  .loading h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .user-app{
+    background-color:#81C6E8;;
+  }
