@@ -43,7 +43,10 @@
   .link:hover {
     opacity: 0.7;
   }
-   
+   button:disabled {
+     opacity: 0.3;
+    pointer-events:none;
+   }
 
   .error-btn {
    background-color: blue;

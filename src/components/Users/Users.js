@@ -13,10 +13,10 @@ const Users = () => {
 const [Data, setData] = useState([]);
 const [Loading,setLoading]= useState(false)
 const [currentPage, setCurrentPage] = useState(1);
-const [postsPerPage, setPostsPerPage] = useState(5);
+const [postsPerPage] = useState(5);
 
 
-const [pagenumberlimit,setpagenumberlimit]=useState(5)
+const [pagenumberlimit]=useState(5)
 const [maxpagenumber,setmaxpagenumber]=useState(5)
 const [minpagenumber,setminpagenumber]=useState(0)
   
@@ -37,7 +37,7 @@ if(!response.ok){
 
 
    // Formatting the body data to what we need
-       Apiresult.map((each,index)=>{
+       Apiresult.map((each)=> { return (
            transformedData.push({
                image:each.picture.medium,
                phone: each.phone,
@@ -51,6 +51,7 @@ if(!response.ok){
                city: each.location.city,
                state: each.location.state,
            })
+       )
        })
         
         // Sending the data to the component that send the request
@@ -89,13 +90,14 @@ const currentPosts = Data.slice(firstPostIndex, lastPostIndex);
      if(number<maxpagenumber+1 && number>minpagenumber)
       return (
           <button
-           className={currentPage==number? 'active' : ''} 
+           className={currentPage===number? 'active' : ''} 
           key={number} 
           value={number}
           onClick={Handlepagenumber}
           >{number}</button>
       
      )
+     return 
   })
   
 
@@ -115,7 +117,7 @@ const currentPosts = Data.slice(firstPostIndex, lastPostIndex);
 
  const handleprevbtn=()=>{
     setCurrentPage((prevpage)=>prevpage -1)
-    if((currentPage-1)%pagenumberlimit==0){
+    if((currentPage-1)%pagenumberlimit===0){
         setmaxpagenumber(maxpagenumber - pagenumberlimit)
         setminpagenumber(minpagenumber - pagenumberlimit)
     }
@@ -151,16 +153,16 @@ return Loading?(<div className='loading'>
      <div className='pagenumber'>
      <button 
      onClick={handleprevbtn}
-     disabled={ currentPage == page[0] ?true :false}
+     disabled={ currentPage === page[0] ?true :false}
      >Prev</button>
-   
+
      {decrementbtn}
      {renderpagenumber}
      {incrementbtn}
    
      <button
      onClick={handlenextbtn}
-     disabled={ currentPage == page[page.length-1] ?true :false}
+     disabled={ currentPage === page[page.length-1] ?true :false}
      >Next</button>
 
      </div>
